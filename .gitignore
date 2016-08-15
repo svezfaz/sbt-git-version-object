@@ -1,0 +1,13 @@
+*.class
+target
+.gitconfig
+
+**/*.iml
+.idea
+
+.DS_Store
+**/*.DS_Store
+
+**/target/*
+target
+
