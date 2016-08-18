@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/svezfaz/sbt-git-version-object.svg?branch=master)](https://travis-ci.org/svezfaz/sbt-git-version-object)  [ ![Download](https://api.bintray.com/packages/svezfaz/sbt-plugins/sbt-git-version-object/images/download.svg) ](https://bintray.com/svezfaz/sbt-plugins/sbt-git-version-object/_latestVersion)
 
 This SBT plugin allows to automatically generate two files containing information about your GIT repository at build time.
+
 1. a ``Version.scala`` object
 2. a ``version.conf`` properties file
 
