@@ -6,7 +6,7 @@ import bintray.Keys._
 object PluginBuild extends Build {
 
   lazy val commonSettings = Seq(
-    version in ThisBuild := "0.0.1",
+    version in ThisBuild := "0.0.2",
     organization in ThisBuild := "eu.svez"
   )
 
