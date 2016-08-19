@@ -9,8 +9,8 @@ import sbt._
 
 object GitVersionObjectPlugin extends Plugin {
 
-  def gitVersionSettings(pkg: String): Seq[Setting[_]] = inConfig(Compile)(Seq(
-    resourceGenerators <+= generateVersion(resourceManaged, _ / "version.conf",
+  def gitVersionSettings(pkg: String, filename: String): Seq[Setting[_]] = inConfig(Compile)(Seq(
+    resourceGenerators <+= generateVersion(resourceManaged, _ / s"$filename.conf",
       """|build.date = "%s"
         |git.branch = "%s"
         |git.repo-is-clean = "%s"
@@ -18,7 +18,7 @@ object GitVersionObjectPlugin extends Plugin {
         |git.head.commit.author = "%s"
         |git.head.commit.date = "%s"
         | """),
-    sourceGenerators <+= generateVersion(sourceManaged, _ / pkg / "Version.scala",
+    sourceGenerators <+= generateVersion(sourceManaged, _ / pkg / s"$filename.scala",
       s"""|package $pkg
         |
         |object Version {
