@@ -21,7 +21,7 @@ object GitVersionObjectPlugin extends Plugin {
     sourceGenerators <+= generateVersion(sourceManaged, _ / pkg / s"$filename.scala",
       s"""|package $pkg
         |
-        |object Version {
+        |object $filename {
         |  val buildDate: String = "%s"
         |  val gitBranch: String = "%s"
         |  val gitRepoIsClean: String = "%s"
